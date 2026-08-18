@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0e0c;
+  --foreground: #f4f6f5;
+
+  /* Pitch green — primary brand/action color */
+  --color-pitch-50: #ecfdf3;
+  --color-pitch-100: #d1fae2;
+  --color-pitch-200: #a7f3c8;
+  --color-pitch-300: #6ee7a8;
+  --color-pitch-400: #34d17f;
+  --color-pitch-500: #16a34a;
+  --color-pitch-600: #0f8a3d;
+  --color-pitch-700: #0c6d31;
+  --color-pitch-800: #0b5529;
+  --color-pitch-900: #094522;
+
+  /* Sky blue — secondary accent */
+  --color-sky-50: #eff8ff;
+  --color-sky-100: #dbeefe;
+  --color-sky-200: #bfe3fe;
+  --color-sky-300: #7cc8fd;
+  --color-sky-400: #38aefb;
+  --color-sky-500: #0ea5e9;
+  --color-sky-600: #0284c7;
+  --color-sky-700: #036aa1;
+  --color-sky-800: #075985;
+  --color-sky-900: #0c4a6e;
+
+  /* Night — near-black surfaces */
+  --color-night-50: #f4f6f5;
+  --color-night-100: #e2e6e4;
+  --color-night-200: #c3cac6;
+  --color-night-300: #8f9a94;
+  --color-night-400: #5c6864;
+  --color-night-500: #384340;
+  --color-night-600: #262f2c;
+  --color-night-700: #1a211f;
+  --color-night-800: #121715;
+  --color-night-900: #0a0e0c;
+  --color-night-950: #050706;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-pitch-50: var(--color-pitch-50);
+  --color-pitch-100: var(--color-pitch-100);
+  --color-pitch-200: var(--color-pitch-200);
+  --color-pitch-300: var(--color-pitch-300);
+  --color-pitch-400: var(--color-pitch-400);
+  --color-pitch-500: var(--color-pitch-500);
+  --color-pitch-600: var(--color-pitch-600);
+  --color-pitch-700: var(--color-pitch-700);
+  --color-pitch-800: var(--color-pitch-800);
+  --color-pitch-900: var(--color-pitch-900);
+
+  --color-sky-50: var(--color-sky-50);
+  --color-sky-100: var(--color-sky-100);
+  --color-sky-200: var(--color-sky-200);
+  --color-sky-300: var(--color-sky-300);
+  --color-sky-400: var(--color-sky-400);
+  --color-sky-500: var(--color-sky-500);
+  --color-sky-600: var(--color-sky-600);
+  --color-sky-700: var(--color-sky-700);
+  --color-sky-800: var(--color-sky-800);
+  --color-sky-900: var(--color-sky-900);
+
+  --color-night-50: var(--color-night-50);
+  --color-night-100: var(--color-night-100);
+  --color-night-200: var(--color-night-200);
+  --color-night-300: var(--color-night-300);
+  --color-night-400: var(--color-night-400);
+  --color-night-500: var(--color-night-500);
+  --color-night-600: var(--color-night-600);
+  --color-night-700: var(--color-night-700);
+  --color-night-800: var(--color-night-800);
+  --color-night-900: var(--color-night-900);
+  --color-night-950: var(--color-night-950);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+@keyframes pulse-badge {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-badge-in {
+  animation: pulse-badge 320ms ease-out;
+}
